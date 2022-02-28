@@ -124,6 +124,7 @@ export default function LoginScreen({ navigation }) {
 
         <Text style={styles.userdata}>Password</Text>
         <TextInput
+        secureTextEntry
           placeholder="Password"
           style={styles.username}
           onChangeText={(e) => handlePasswordChange(e)}
