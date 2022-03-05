@@ -20,7 +20,7 @@ export default function SignUp() {
         " " +
         data1.confirmPassword
     );
-    await Axios.post("http://192.168.1.147:8000/data/register", {
+    await Axios.post("http://192.168.1.32:8000/data/register", {
       username: data1.username,
       password: data1.password,
       confirmPassword: data1.confirmPassword,

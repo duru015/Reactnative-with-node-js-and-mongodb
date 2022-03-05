@@ -16,8 +16,7 @@ export default function LoginScreen({ navigation }) {
     const LoginData = () => {
     console.log("username", state.username);
     console.log("password", state.password);
-
-    Axios.post("http://192.168.1.147:8000/data/signin", {
+    Axios.post("http://192.168.1.32:8000/data/signin", {
       username: state.username,
       password: state.password,
     })
@@ -25,7 +24,9 @@ export default function LoginScreen({ navigation }) {
       .then((response) => {
 
         if (response.data.status === "success") {
-          navigation.navigate("Dashboard");
+          navigation.push("Dashboard",{username:state.username});
+
+          
         } else {
           alert("Username and Password donot match");
         }

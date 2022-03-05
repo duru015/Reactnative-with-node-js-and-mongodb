@@ -53,4 +53,12 @@ ReactRouter.post(
     return res.json({ status: "successful" });
   }
 );
+
+
+ReactRouter.get('/getAllData',(req,res)=>{
+ 
+  User.find({}).then(function (users) {
+    res.send(users);
+    });
+});
 module.exports = ReactRouter;
